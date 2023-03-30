@@ -68,6 +68,11 @@ const Login = () => {
       <Card style={{ maxWidth: 500, margin: "3rem auto", padding: "2rem" }}>
         <Form onSubmit={handleSubmit(submit)}>
           <h1>Login</h1>
+          <div className="login-prueba">
+            <h3>Para probar</h3>
+            <p>User: admin@gmail.com</p>
+            <p>Pass: admin1234</p>
+          </div>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
             <Form.Control

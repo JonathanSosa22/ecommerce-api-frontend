@@ -21,6 +21,14 @@ const SideBar = ({ show, handleClose }) => {
           <Offcanvas.Title>Offcanvas</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
+          {/* {cartAdd.map((item) => (
+            <div key={item.id}>
+              <li>
+                {item.product.title} Price: ${item.product.price} x
+                {item.quantity}
+              </li>
+            </div>
+          ))} */}
           <div className="purchase-tab">
             <Table striped bordered hover variant="dark">
               <thead>
