@@ -87,14 +87,14 @@ const ProductDetail = () => {
               <Carousel.Item>
                 <img
                   className="d-block w-100"
-                  src={product?.productImgs[2].url}
+                  src={product?.productImgs[1].url}
                   alt="Second slide"
                 />
               </Carousel.Item>
               <Carousel.Item>
                 <img
                   className="d-block w-100"
-                  src={product?.productImgs[2].url}
+                  src={product?.productImgs[0].url}
                   alt="Third slide"
                 />
               </Carousel.Item>
