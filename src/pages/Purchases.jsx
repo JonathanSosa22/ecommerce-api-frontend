@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import getConfig from "../utils/getConfig";
+import Table from "react-bootstrap/Table";
 
 const Purchases = () => {
   const [purchases, setPurchases] = useState([]);
@@ -13,17 +14,25 @@ const Purchases = () => {
   }, []);
 
   return (
-    <div>
-      <div>
-        <h1>Purchases</h1>
+    <div className="purchase-tab">
+      <Table striped bordered hover variant="dark">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+          </tr>
+        </thead>
         {purchases.map((item) => (
-          <div key={item.id}>
-            <li>
-              {item.product.title} Price: ${item.product.price}
-            </li>
-          </div>
+          <>
+            <tbody>
+              <tr>
+                <td>{item.product.title}</td>
+                <td>${item.product.price}</td>
+              </tr>
+            </tbody>
+          </>
         ))}
-      </div>
+      </Table>
     </div>
   );
 };
