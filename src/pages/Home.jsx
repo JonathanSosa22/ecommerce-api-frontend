@@ -6,7 +6,7 @@ import {
   getCategoryThunk,
   getProductThunk,
 } from "../store/slices/product.slice";
-import { Button } from "react-bootstrap";
+import { Row, Col, Button, Card } from "react-bootstrap";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -24,8 +24,7 @@ const Home = () => {
 
   return (
     <div>
-      <h1>Home</h1>
-      {categoriesList.map((category) => (
+      {/* {categoriesList.map((category) => (
         <Button
           key={category.id}
           onClick={() => dispatch(getCategoryThunk(category.id))}
@@ -45,7 +44,44 @@ const Home = () => {
           <p>{productItem?.description}</p>
           <p>Price: ${productItem?.price}</p>
         </div>
-      ))}
+      ))} */}
+
+      <div>
+        {categoriesList?.map((category) => (
+          <Button
+            key={category.id}
+            onClick={() => dispatch(getCategoryThunk(category.id))}
+          >
+            {category.name}
+          </Button>
+        ))}
+        <Button
+          className="btn"
+          onClick={() => dispatch(dispatch(getProductThunk(product)))}
+        >
+          See All
+        </Button>
+        <Row xs={1} md={2} lg={3}>
+          {product?.map((productItem) => (
+            <Col key={productItem.id}>
+              <Card className="card-home">
+                <Card.Img variant="top" src={productItem.productImgs[2].url} />
+                <Card.Body className="card-home">
+                  <Card.Title>{productItem?.title}</Card.Title>
+                  <Card.Text>{productItem?.description}</Card.Text>
+                  <Button
+                    variant="primary"
+                    as={Link}
+                    to={`/product/${productItem?.id}`}
+                  >
+                    See Detail
+                  </Button>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </div>
     </div>
   );
 };

@@ -4,6 +4,17 @@
   box-sizing: border-box;
 }
 
+.btn {
+  margin: 10px;
+}
+
+/* Home */
+
+.card-home {
+  height: 380px;
+  margin: 10px;
+}
+
 /* LoadingScreen */
 
 .spinner-overlay {
