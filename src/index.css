@@ -5,7 +5,7 @@
 }
 
 .btn {
-  margin: 10px;
+  margin: 5px;
 }
 
 img {
@@ -16,8 +16,12 @@ img {
 /* Home */
 
 .card-home {
-  height: 380px;
-  margin: 10px;
+  margin: 3px 0;
+}
+
+.home {
+  width: 90%;
+  margin: 0 auto;
 }
 
 /* Products Details */
@@ -31,7 +35,7 @@ img {
 }
 
 .card-produc-detail {
-  padding: 20px;
+  padding: 5px;
 }
 
 .list-product {
@@ -41,7 +45,7 @@ img {
 /* Purchases */
 
 .purchase-tab {
-  margin: 10px auto;
+  margin: 5px auto;
   width: 90%;
 }
 

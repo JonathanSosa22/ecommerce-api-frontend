@@ -23,7 +23,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
+    <div className="home">
       {/* {categoriesList.map((category) => (
         <Button
           key={category.id}

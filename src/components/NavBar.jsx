@@ -15,7 +15,7 @@ const NavBar = () => {
 
   return (
     <>
-      <Navbar bg="dark" variant="dark">
+      <Navbar bg="dark" variant="dark" style={{ width: "100%" }}>
         <Container>
           <Navbar.Brand as={Link} to="/">
             E-Commerce
